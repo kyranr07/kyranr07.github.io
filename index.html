@@ -7,7 +7,7 @@
   <meta name="description" content="Kyran Romero studies AI overreliance and human-AI complementarity at Harvard's Kempner Institute.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,9 +15,7 @@
 
     <!-- ===== Sidebar: name, role, links ===== -->
     <header class="sidebar">
-
-      <img class="headshot" src="assets/headshot.jpg" alt="Kyran Romero">
-      
+      <img class="headshot" src="assets/headshot.jpg" alt="Kyran Romero" onerror="this.remove()">
       <h1 class="name">Kyran Romero</h1>
       <p class="role">Post-Baccalaureate Research Fellow<br>Kempner Institute, Harvard University</p>
 
@@ -29,10 +27,10 @@
       </nav>
 
       <ul class="links">
-        <li><a href="mailto:kromero@fas.harvard.edu">kromero@fas.harvard.edu</a></li>
+        <li><a href="#" id="email-link">Email</a></li>
         <li><a href="assets/Kyran_Romero_CV.pdf">CV (PDF)</a></li>
         <li><a href="https://linkedin.com/in/kyran-romero">LinkedIn</a></li>
-        <li><a href="https://github.com/kyranr07">GitHub</a></li>
+        <li><a href="https://github.com/YOUR-USERNAME">GitHub</a></li>
         <!-- <li><a href="https://scholar.google.com/citations?user=YOUR-ID">Google Scholar</a></li> -->
       </ul>
     </header>
@@ -58,10 +56,10 @@
       </section>
 
       <!-- ===== Papers ===== -->
-    <!-- <section id="papers">
+      <section id="papers">
         <h2>Papers</h2>
-        <p class="empty">Papers will be listed here as they are published.</p> -->
-            
+        <p class="empty">Papers will be listed here as they are published.</p>
+
         <!--
           TO ADD A PAPER: delete the "empty" line above, then copy this block.
           Newest first. Put PDFs in assets/papers/.
@@ -92,16 +90,18 @@
         <article class="poster">
           <a class="poster-thumb" href="assets/posters/2026-cmu-verification-override.pdf">
             <img src="assets/posters/2026-cmu-verification-override.png"
-                 alt="Poster: From Overreliance to Verification and Override"
+                 alt="Poster: From Overreliance to Override"
                  loading="lazy" onerror="this.parentElement.remove()">
           </a>
           <div class="poster-body">
-            <h3 class="entry-title">From Overreliance to Verification and Override: Identifying Hidden Traits for AI Support</h3>
+            <h3 class="entry-title">From Overreliance to Override: Identifying Hidden Traits for AI Support</h3>
+            <p class="entry-authors"><strong>Kyran Romero</strong>, Siddharth Swaroop, Krzysztof Gajos, Finale Doshi-Velez</p>
             <p class="entry-venue">Human-AI Complementarity Workshop: Dynamic Alignment, Carnegie Mellon University, September 2026</p>
             <p class="entry-summary">
-              Treats a user's ability to verify correct AI recommendations and override incorrect ones as
-              traits that can be inferred early in a session, and tests a contrastive cue meant to
-              help users who struggle to override.
+              A pilot study (n=80) found that family-level AI support protected users when the AI was
+              wrong only by withholding the answer, while species-level support helped mainly when the
+              AI was right. Neither asked users to check the image, so this work proposes a contrastive
+              question that directs users to the one feature that settles the choice.
             </p>
             <p class="entry-links"><a href="assets/posters/2026-cmu-verification-override.pdf">Poster (PDF)</a></p>
           </div>
@@ -110,15 +110,18 @@
         <article class="poster">
           <a class="poster-thumb" href="assets/posters/2026-kempner-cognitive-differences.pdf">
             <img src="assets/posters/2026-kempner-cognitive-differences.png"
-                 alt="Poster: Tailoring AI Assistance to Individual Cognitive Differences"
+                 alt="Poster: Beyond Overreliance"
                  loading="lazy" onerror="this.parentElement.remove()">
           </a>
           <div class="poster-body">
-            <h3 class="entry-title">Tailoring AI Assistance to Individual Cognitive Differences in a Visual Classification Task</h3>
+            <h3 class="entry-title">Beyond Overreliance: Reasoning Capacity as the True Moderator of AI Support Specificity</h3>
+            <p class="entry-authors"><strong>Kyran Romero</strong>, Siddharth Swaroop, Krzysztof Gajos, Finale Doshi-Velez</p>
             <p class="entry-venue">Kempner Institute Spring Into Science Research Symposium, Harvard University, May 2026</p>
             <p class="entry-summary">
-              Uses a bird species classification task to compare how different kinds of AI support
-              help people with different reasoning styles and levels of reliance on AI.
+              In a bird classification task, participants were split by reasoning level and overreliance,
+              then given either general family-level or direct species-level AI support. Species-level
+              support helped most overall, and reasoning level, not overreliance, shaped which support
+              worked.
             </p>
             <p class="entry-links"><a href="assets/posters/2026-kempner-cognitive-differences.pdf">Poster (PDF)</a></p>
           </div>
@@ -145,5 +148,14 @@
       </footer>
     </main>
   </div>
+  <script>
+    document.getElementById('email-link').addEventListener('click', function (e) {
+      e.preventDefault();
+      var addr = ['kromero', 'fas.harvard.edu'].join('@');
+      this.textContent = addr;
+      this.href = 'mailto:' + addr;
+      window.location.href = this.href;
+    });
+  </script>
 </body>
 </html>

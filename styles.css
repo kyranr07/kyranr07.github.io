@@ -2,13 +2,14 @@
 :root {
   --bg: #EFEEE6;        /* light stone */
   --ink: #2B2118;       /* dark umber, main text */
-  --muted: #6B5A4A;     /* warm brown-grey, secondary text */
-  --accent: #4A6B3A;    /* moss green, links */
+  --muted: #5A4633;     /* warm brown, secondary text */
+  --accent: #3D6130;    /* forest green, links */
   --rule: #CDBFA8;      /* sand brown, dividers */
   --thumb-bg: #E3DED1;
 
-  --serif: "Spectral", Georgia, serif;
-  --sans: "Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Outfit everywhere. To change fonts, edit these two lines and the font link in index.html */
+  --serif: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sans: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   color-scheme: light;
 }
@@ -80,6 +81,7 @@ img { max-width: 100%; display: block; }
   height: 10rem;
   object-fit: cover;
   border-radius: 50%;
+  border: 4px solid var(--rule);
   margin-bottom: 1.5rem;
 }
 
