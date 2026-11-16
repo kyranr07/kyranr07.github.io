@@ -1,26 +1,26 @@
 /* ===== Tokens ===== */
 :root {
-  --bg: #F6F7F5;
-  --ink: #1C211E;
-  --muted: #5B6660;
-  --accent: #2E5E52;      /* juniper green: links, focus */
-  --rule: #DCE1DD;
-  --thumb-bg: #E8ECE9;
+  --bg: #EFEEE6;        /* light stone */
+  --ink: #2B2118;       /* dark umber, main text */
+  --muted: #6B5A4A;     /* warm brown-grey, secondary text */
+  --accent: #4A6B3A;    /* moss green, links */
+  --rule: #CDBFA8;      /* sand brown, dividers */
+  --thumb-bg: #E3DED1;
 
-  --serif: "Literata", Georgia, "Times New Roman", serif;
-  --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Spectral", Georgia, serif;
+  --sans: "Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #141816;
-    --ink: #E4E8E5;
-    --muted: #9AA59F;
-    --accent: #8FC4B3;
-    --rule: #2C332F;
-    --thumb-bg: #1F2522;
+    --bg: #1C1915;      /* dark soil */
+    --ink: #ECE6DA;
+    --muted: #B3A592;
+    --accent: #9DBB86;  /* sage */
+    --rule: #4A3F33;
+    --thumb-bg: #26221C;
     color-scheme: dark;
   }
 }
