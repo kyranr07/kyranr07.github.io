@@ -6,6 +6,7 @@
   --accent: #3D6130;    /* forest green, links */
   --rule: #CDBFA8;      /* sand brown, dividers */
   --thumb-bg: #E3DED1;
+  --cow-line: #2B2118;   /* cow outline */
 
   /* Outfit everywhere. To change fonts, edit these two lines and the font link in index.html */
   --serif: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -22,6 +23,7 @@
     --accent: #9DBB86;  /* sage */
     --rule: #4A3F33;
     --thumb-bg: #26221C;
+    --cow-line: #8C7A66;
     color-scheme: dark;
   }
 }
@@ -229,4 +231,36 @@ p { margin: 0 0 1rem; }
     border-left: 0;
   }
   .poster { grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; }
+}
+
+
+/* ===== Wandering cows (decorative, side margins only; see cows.js) ===== */
+.page { position: relative; z-index: 1; }
+#pasture {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+#pasture[hidden] { display: none; }
+#pasture svg { position: absolute; left: 0; top: 0; display: block; overflow: visible; }
+.tuft { transform-origin: 50% 100%; transition: transform 1.2s steps(3, end); }
+.tuft.nibbled { transform: scaleY(0.45); }
+
+.cow .head-down,
+.cow .legs-b { visibility: hidden; }
+.cow.grazing .head-up { visibility: hidden; }
+.cow.grazing .head-down { visibility: visible; animation: chew 1.1s steps(1, end) infinite; }
+.cow.walking .legs-a { animation: step-a 0.5s steps(1, end) infinite; }
+.cow.walking .legs-b { animation: step-b 0.5s steps(1, end) infinite; }
+.cow .tail { animation: swish 3.4s steps(1, end) infinite; }
+
+@keyframes chew   { 0% { transform: translateY(0); } 50% { transform: translateY(1px); } }
+@keyframes step-a { 0% { visibility: visible; } 50% { visibility: hidden; } }
+@keyframes step-b { 0% { visibility: hidden; } 50% { visibility: visible; } }
+@keyframes swish  { 0%, 75% { transform: translateX(0); } 85% { transform: translateX(-1px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .cow .head-down, .cow .tail, .cow .legs-a, .cow .legs-b { animation: none; }
 }

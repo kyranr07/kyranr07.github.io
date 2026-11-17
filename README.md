@@ -6,6 +6,7 @@ A plain HTML and CSS site with no build step. GitHub Pages serves it as is.
 
 ```
 index.html                 the whole page (About, Papers, Posters, Talks)
+cows.js                    the wandering cows in the side margins
 styles.css                 colors, fonts, layout
 assets/Kyran_Romero_CV.pdf your CV (replace it when you update)
 assets/posters/            poster PDFs and PNG previews
@@ -46,6 +47,12 @@ In the Papers section of `index.html`:
 1. Delete the line that says "Papers will be listed here as they are published."
 2. Copy the commented template block below it, remove the `<!--` and `-->` around your copy, and fill it in.
 3. Put the PDF in `assets/papers/`. Keep the newest paper at the top.
+
+## The cows
+
+`cows.js` draws the grazing cows in the side margins. They only appear when the window is wide
+enough to fit them without touching the text. Settings like the number of cows, walking speed
+and grazing time are at the top of the file.
 
 ## Update the date
 
