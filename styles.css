@@ -79,8 +79,8 @@ img { max-width: 100%; display: block; }
 
 /* ===== Sidebar ===== */
 .headshot {
-  width: 13rem;
-  height: 13rem;
+  width: 10rem;
+  height: 10rem;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid var(--rule);
@@ -126,6 +126,21 @@ img { max-width: 100%; display: block; }
   font-size: 0.875rem;
   line-height: 1.9;
 }
+
+/* ===== Tour button ===== */
+.tour-button {
+  display: inline-block;
+  margin: -0.75rem 0 2rem;
+  padding: 0.55rem 0.95rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--accent);
+  border-radius: 6px;
+  text-decoration: none;
+}
+.tour-button:hover { text-decoration: none; filter: brightness(1.08); }
 
 /* ===== Sections ===== */
 section { padding-top: 0.25rem; margin-bottom: 3.5rem; scroll-margin-top: 2rem; }

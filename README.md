@@ -7,6 +7,8 @@ A plain HTML and CSS site with no build step. GitHub Pages serves it as is.
 ```
 index.html                 the whole page (About, Papers, Posters, Talks)
 cows.js                    the wandering cows in the side margins
+tour.html, tour.js         the pixel tour of Jemez Pueblo
+assets/tour/               tour scenes and character sprites
 styles.css                 colors, fonts, layout
 assets/Kyran_Romero_CV.pdf your CV (replace it when you update)
 assets/posters/            poster PDFs and PNG previews
@@ -53,6 +55,11 @@ In the Papers section of `index.html`:
 `cows.js` draws the grazing cows in the side margins. They only appear when the window is wide
 enough to fit them without touching the text. Settings like the number of cows, walking speed
 and grazing time are at the top of the file.
+
+## The tour
+
+`tour.html` is the pixel walk through Jemez, linked from the "Take a tour of my home" button.
+To change what each stop says, edit the `text` lines in the SCENES list at the top of `tour.js`.
 
 ## Update the date
 
