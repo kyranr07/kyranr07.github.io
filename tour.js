@@ -13,15 +13,15 @@
     { id: 'plaza', name: 'The Plaza', file: 'plaza.png', foot: 91, stop: 96,
       text: 'The heart of the village, with the kiva standing tallest over the plaza.' },
     { id: 'horno', name: 'The Horno', file: 'horno.png', foot: 91, stop: 118,
-      text: 'The outdoor oven by the houses.' },
+      text: 'The outdoor oven by some houses. Amazing, white flufffy loaves of bread are made here.' },
     { id: 'cliffs', name: 'Red Mesa and White Cliffs', file: 'cliffs.png', foot: 91, stop: 100,
-      text: 'Autumn cottonwoods along the drive north.' },
+      text: "Autumn cottonwoods along the drive north. The backroads I'd travel with my brother and dad." },
     { id: 'red-rocks', name: 'Red Rocks', file: 'red-rocks.png', foot: 89, stop: 104,
-      text: 'The gas station and store.' },
+      text: 'The gas station and store. All the best snacks (frazil) are here' },
     { id: 'visitor-center', name: 'Walatowa Visitor Center', file: 'visitor-center.png', foot: 89, stop: 96,
       text: 'The Walatowa Visitor Center on the highway.' },
     { id: 'valles-caldera', name: 'Valles Caldera', file: 'valles-caldera.png', foot: 91, stop: 92,
-      text: 'The finale, up in the mountains.' }
+      text: 'Our original homelands before we were forced onto the reservation down south.' }
   ];
 
   // Sprite sheets: three frames side by side, facing right.
